@@ -19,14 +19,12 @@ export default function Home({data}) {
               <td>{data[0].store.name}</td>
               <td>{data[0].stock}</td>
             </tr>
-            <tr>
-              <td>{data[1].store.name}</td>
-              <td>{data[1].stock}</td>
-            </tr>
-            <tr>
-              <td>{data[2].store.name}</td>
-              <td>{data[2].stock}</td>
-            </tr>
+            {data.map((val) => {
+              <tr>
+                <td>{val.store.name}</td>
+                <td>{val.stock}</td>
+                </tr>
+            })}
           </table>
         </section>
     </Layout>
