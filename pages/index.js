@@ -39,6 +39,8 @@ export async function getServerSideProps() {
     const data = await response.json()
     return { props: {data}}
   } else {
-  
+    const response = await fetch("http://blahajcheckeruk.sean.cyou/api/stores")
+    const data = await response.json()
+    return { props: {data}}
   }
 }
