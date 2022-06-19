@@ -1,22 +1,44 @@
 import Layout from '../components/layout'
-import StoreDisplay from '../components/stores/display'
-export default function Home({StoresData}) {
+export default function Home({data}) {
   return (
     <>
       <Layout title="home">
-        TODO: This
+        <p>
+        TODO: This page
+        <br />
+        Not fully working or styled but its a start
+        </p>
         <section className='card'>
-          <h2 className='title card-title'>Stores</h2>
-          <StoreDisplay data={StoresData}></StoreDisplay>
+          <h2 className='title card-title'>availability</h2>
+          <table border="1">
+            <tr>
+              <th>Location</th>
+              <th>Stock</th>
+            </tr>
+            <tr>
+              <td>{data[0].store.name}</td>
+              <td>{data[0].stock}</td>
+            </tr>
+            <tr>
+              <td>{data[1].store.name}</td>
+              <td>{data[1].stock}</td>
+            </tr>
+            <tr>
+              <td>{data[2].store.name}</td>
+              <td>{data[2].stock}</td>
+            </tr>
+          </table>
         </section>
     </Layout>
     </>
   )
 }
 export async function getServerSideProps() {
-  // Stores
-  const StoresRes = await fetch(`/api/stores/get`)
-  const StoresData = await StoresRes.json()
-  // Pass data to the page via props
-  return { props: { StoresData } }
+  if (process.env["NODE_ENV"] == "development") {
+    const response = await fetch("http://localhost:3000/api/stores")
+    const data = await response.json()
+    return { props: {data}}
+  } else {
+  
+  }
 }
