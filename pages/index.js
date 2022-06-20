@@ -1,4 +1,6 @@
 import Layout from '../components/layout'
+import { Suspense } from 'react'
+import StockRender from '../components/stock/render'
 export default function Home({data}) {
   return (
     <>
@@ -19,12 +21,9 @@ export default function Home({data}) {
               <td>{data[0].store.name}</td>
               <td>{data[0].stock}</td>
             </tr>
-            {data.map((val) => {
-              <tr>
-                <td>{val.store.name}</td>
-                <td>{val.stock}</td>
-                </tr>
-            })}
+            <Suspense fallback={`Loading...`}>
+              <StockRender data={data} />
+            </Suspense>
           </table>
         </section>
     </Layout>
