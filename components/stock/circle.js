@@ -11,7 +11,6 @@ export default function StockCircle({data}) {
     } else {
         url = urlArray[3]
     }
-    console.log(data.stock)
     return (
         <>
         <td>
