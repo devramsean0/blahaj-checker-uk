@@ -1,7 +1,13 @@
 import Layout from '../components/layout'
 import { Suspense } from 'react'
 import StockRender from '../components/stock/render'
-export default function Home({data}) {
+import useSWR from 'swr'
+export default function Home() {
+  const fetcher = (...args) => fetch(...args).then((res) => res.json())
+  const { data, error } = useSWR('/api/stores', fetcher)
+
+  if (error) return <div>Failed to load</div>
+  if (!data) return <div>Loading...</div>
   return (
     <>
       <Layout title="home">
@@ -17,10 +23,6 @@ export default function Home({data}) {
               <th>Location</th>
               <th>Stock</th>
             </tr>
-            <tr>
-              <td>{data[0].store.name}</td>
-              <td>{data[0].stock}</td>
-            </tr>
             <Suspense fallback={`Loading...`}>
               <StockRender data={data} />
             </Suspense>
@@ -29,15 +31,4 @@ export default function Home({data}) {
     </Layout>
     </>
   )
-}
-export async function getServerSideProps() {
-  if (process.env["NODE_ENV"] == "development") {
-    const response = await fetch("http://localhost:3000/api/stores")
-    const data = await response.json()
-    return { props: {data}}
-  } else {
-    const response = await fetch("http://blahajcheckeruk.sean.cyou/api/stores")
-    const data = await response.json()
-    return { props: {data}}
-  }
 }
