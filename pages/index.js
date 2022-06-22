@@ -20,6 +20,7 @@ export default function Home() {
           <h2 className='title card-title'>availability</h2>
           <table border="1">
             <tr>
+              <th>Stock Indicator</th>
               <th>Location</th>
               <th>Stock</th>
             </tr>
