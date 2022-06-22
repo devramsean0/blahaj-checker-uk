@@ -2,12 +2,13 @@ import Layout from '../components/layout'
 import { Suspense } from 'react'
 import StockRender from '../components/stock/render'
 import useSWR from 'swr'
+import Loading from '../components/misc/loading'
 export default function Home() {
   const fetcher = (...args) => fetch(...args).then((res) => res.json())
   const { data, error } = useSWR('/api/stores', fetcher)
 
   if (error) return <div>Failed to load</div>
-  if (!data) return <div>Loading...</div>
+  if (!data) return <Loading />
   return (
     <>
       <Layout title="home">
