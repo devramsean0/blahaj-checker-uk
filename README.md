@@ -7,4 +7,3 @@ A fun little project, took me like a day to get to a prototype stage
 * [Vercel](https://vercel.com)
 * [Yarn](https://yarnpkg.com)
 * [Ikea's api](https://ikea.com)
-*[FusionCharts](https://https://www.fusioncharts.com)
