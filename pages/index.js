@@ -25,7 +25,7 @@ export default function Home() {
               <th>Location</th>
               <th>Stock</th>
             </tr>
-            <Suspense fallback={`Loading...`}>
+            <Suspense fallback={<Loading />}>
               <StockRender data={data} />
             </Suspense>
           </table>
