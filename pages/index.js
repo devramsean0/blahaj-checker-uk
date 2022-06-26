@@ -12,11 +12,6 @@ export default function Home() {
   return (
     <>
       <Layout title="home">
-        <p>
-        TODO: This page
-        <br />
-        Not fully working or styled but its a start
-        </p>
         <section className='card'>
           <h2 className='title card-title'>availability</h2>
           <table border="1">
