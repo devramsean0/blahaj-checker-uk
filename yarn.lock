@@ -923,7 +923,7 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
-halfmoon@^1.1.1:
+halfmoon@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/halfmoon/-/halfmoon-1.1.1.tgz#af45c2d78bb869a408a5b72bbac2dccbe89d2aed"
   integrity sha512-w/ydT3CixxxxdJP4a3sqSzUnCJFmhvcqE2vQOIsWCfevpqanKlbGQNUwKJH0nKvo13M89eetM3R0gsTOfNLGHA==
@@ -976,7 +976,7 @@ ignore@^5.2.0:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
   integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
 
-ikea-availability-checker@^2.0.0-alpha.3:
+ikea-availability-checker@2.0.0-alpha.3:
   version "2.0.0-alpha.3"
   resolved "https://registry.yarnpkg.com/ikea-availability-checker/-/ikea-availability-checker-2.0.0-alpha.3.tgz#44a6146161dc6ef9006585ece8fea67b3b303187"
   integrity sha512-k9sCzogr5EjKHsB72ICD1k7vdijMr8fRi2VaT4EmbYAZRU9byy+CsPaTicrYFYoOfOfm0RbM+Fib7IZyiPNXaA==
