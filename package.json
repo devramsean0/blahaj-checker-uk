@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "halfmoon": "^1.1.1",
+    "halfmoon": "^2.0.0",
     "ikea-availability-checker": "^2.0.0-alpha.3",
     "ioredis": "5.2.1",
     "next": "12.2.2",
